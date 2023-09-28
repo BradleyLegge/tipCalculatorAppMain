@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <main>
+        <article class="left">
+            <section class="bill">
+                <h3>Bill</h3>
+                <input type="text" placeholder="$0">
+            </section>
+            <section class="tip-percent">
+                <h3>Select Tip %</h3>
+                <div class="tip-group">
+                    <button class="tip five" id="tip">5%</button>
+                    <button class="tip ten">10%</button>
+                    <button class="tip fifteen">15%</button>
+                    <button class="tip twenty-five">25%</button>
+                    <button class="tip fifty">50%</button>
+                    <button class="tip custom">Custom</button>
+                </div>
+            </section>
+            <section class="people">
+                <h3>Number of People</h3>
+                <input type="text" placeholder="0">
+            </section>
+        </article>
+        <article class="right">
+            <section class="tip-per-person">
+                <h3>Tip Amount<br><span>/ person</span></h3>
+                <h2 id="tip-amount">$0.00</h2>
+            </section>
+            <section class="tip-amount-total">
+                <h3>Total<br><span>/ person</span></h3>
+                <h2 id="tip-total">$0.00</h2>
+            </section>
+            <button class="reset">RESET</button>
+        </article>
+    </main>
+</body>
+</html>
