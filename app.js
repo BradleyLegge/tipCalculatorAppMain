@@ -1,8 +1,8 @@
-const billInput = document.querySelector('#bill-input')
+const billInput = document.getElementById('bill-input')
 const customInput = document.querySelector('.custom')
 const numPeopleInput = document.querySelector('#num-people-input')
 
-const percentFiveBtn = document.querySelector('#five')
+const percentFiveBtn = document.getElementById('five')
 const percentTenBtn = document.querySelector('#ten')
 const percentFifteenBtn = document.querySelector('#fifteen')
 const percentTwentyFiveBtn = document.querySelector('#twenty-five')
@@ -16,8 +16,18 @@ function validateBillInput(){}
 
 function validatePeopleInput(){}
 
-percentFiveBtn.addEventListener('click', )
+percentFiveBtn.addEventListener('click', calcFivePercent)
 
 function calcFivePercent(){
     let fivePercentTip = billInput.value * .05
+    calcTotalTip(fivePercentTip)
 }
+
+percentFifteenBtn.addEventListener('click', calcFifteenPercent)
+
+function calcFifteenPercent(){
+    let fifteenPercentTip = billInput.value * .15
+    console.log(fifteenPercentTip)
+}
+
+
