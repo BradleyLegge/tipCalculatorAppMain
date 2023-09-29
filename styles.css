@@ -59,6 +59,18 @@ input{
     background-color: var(--very-light-grayish-cyan);
     width: 100%;
     text-align: right;
+    padding: 5px;
+    font-size: 24px;
+}
+
+#bill-input:focus{
+    outline: none;
+    border: 2px solid var(--strong-cyan);
+}
+
+#bill-input:hover{
+    border: 2px solid var(--strong-cyan);
+    cursor: pointer;
 }
 
 .tip-percent{
@@ -78,12 +90,45 @@ input{
     color: var(--white);
     border: none;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.tip:hover{
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    cursor: pointer;
+}
+
+.tip:focus{
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    cursor: pointer;
 }
 
 .custom{
     background-color: var(--very-light-grayish-cyan);
     color: var(--very-dark-cyan);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.custom:hover{
+    border: 2px solid var(--strong-cyan);
+    cursor: pointer;
+}
+
+.custom:focus{
+    outline: none;
+    border: 2px solid var(--strong-cyan);
+    cursor: pointer;
+}
+
+.custom:focus::placeholder{
+    color: transparent;
 }
 
 .right{
