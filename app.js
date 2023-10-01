@@ -1,13 +1,13 @@
 const billInput = document.getElementById('bill-input')
-const customInput = document.querySelector('.custom')
-const numPeopleInput = document.querySelector('#num-people-input')
+let customInput = document.querySelector('.custom')
+let numPeopleInput = document.querySelector('#num-people-input')
 
 const percentFiveBtn = document.getElementById('five')
 const percentTenBtn = document.querySelector('#ten')
 const percentFifteenBtn = document.querySelector('#fifteen')
 const percentTwentyFiveBtn = document.querySelector('#twenty-five')
 const percentFiftyBtn = document.querySelector('#fifty')
-const resetBtn = document.querySelector('.resetBtn')
+const resetBtn = document.querySelector('.reset-btn')
 
 const tipAmountPerPerson = document.querySelector('#tip-amount-per-person')
 const tipTotal = document.querySelector('#tip-total')
@@ -19,6 +19,7 @@ function validatePeopleInput(){}
 function validateNumOfPeople(){}
 
 percentFiveBtn.addEventListener('click', calcFivePercent)
+resetBtn.addEventListener('click', resetForm)
 
 function calcFivePercent(){
     let fivePercentTip = billInput.value * .05
@@ -39,6 +40,11 @@ function calcFifteenPercent(){
 
 function calcTotalPerPerson(tip){
     let totalAmount = (billInput.value/numPeopleInput.value) + Number(tip)
-    console.log(totalAmount)
+    tipTotal.innerHTML = `$${totalAmount}`
 }
 
+function resetForm(){
+    billInput = ''
+    customInput = ''
+    numPeopleInput = ''
+}
