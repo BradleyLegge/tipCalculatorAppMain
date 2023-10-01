@@ -16,10 +16,13 @@ function validateBillInput(){}
 
 function validatePeopleInput(){}
 
+function validateNumOfPeople(){}
+
 percentFiveBtn.addEventListener('click', calcFivePercent)
 
 function calcFivePercent(){
     let fivePercentTip = billInput.value * .05
+    console.log(fivePercentTip)
     calcTotalTip(fivePercentTip)
 }
 
@@ -28,6 +31,14 @@ percentFifteenBtn.addEventListener('click', calcFifteenPercent)
 function calcFifteenPercent(){
     let fifteenPercentTip = billInput.value * .15
     console.log(fifteenPercentTip)
+    let fifteenPercentTipPerPerson = fifteenPercentTip / numPeopleInput.value
+    tipAmountPerPerson.innerHTML = `$${fifteenPercentTipPerPerson.toFixed(2)}`
+    console.log(fifteenPercentTipPerPerson)
+    calcTotalPerPerson(fifteenPercentTipPerPerson.toFixed(2))
 }
 
+function calcTotalPerPerson(tip){
+    let totalAmount = (billInput.value/numPeopleInput.value) + Number(tip)
+    console.log(totalAmount)
+}
 

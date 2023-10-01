@@ -73,6 +73,16 @@ input{
     cursor: pointer;
 }
 
+#num-people-input:focus{
+    outline: none;
+    border: 2px solid var(--strong-cyan);
+}
+
+#num-people-input:hover{
+    border: 2px solid var(--strong-cyan);
+    cursor: pointer;
+}
+
 .tip-percent{
     display: flex;
     flex-direction: column;
@@ -157,7 +167,7 @@ h2{
     color: var(--grayish-cyan)
 }
 
-.reset{
+.reset-btn{
     width: 100%;
     margin-top: 60px;
     border: none;
@@ -166,4 +176,3 @@ h2{
     background-color: var(--very-dark-cyan-reset);
     color: var(--very-dark-cyan)
 }
-
