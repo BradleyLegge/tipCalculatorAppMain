@@ -21,7 +21,16 @@ function validateNumOfPeople(){}
 
 resetBtn.addEventListener('click', resetForm)
 
-percentFiveBtn.addEventListener('click', calcFivePercent)
+percentFiveBtn.addEventListener('click', (e) => {
+    if(!billInput.value || !numPeopleInput.value)
+    {
+        console.log('Fields are required!')
+    }
+    else
+    {
+        console.log("Correctly done!")
+    }
+})
 function calcFivePercent(){
     let fivePercentTip = billInput.value * .05
     let fivePercentTipPerPerson = fivePercentTip / numPeopleInput.value
